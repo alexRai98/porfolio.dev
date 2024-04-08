@@ -1,92 +1,134 @@
 ---
 import GitHub from "./icons/GitHub.astro"
-import NextJS from "./icons/NextJS.astro"
-import Tailwind from "./icons/Tailwind.astro"
+import TypeScrypt from "./icons/TypeScrypt.astro"
+import React from "./icons/React.astro"
+import Redux from "./icons/Redux.astro"
+import Kotlin from "./icons/Kotlin.astro"
+import Android from "./icons/Android.astro"
+import Java from "./icons/Java.astro"
+import Vite from "./icons/Vite.astro"
+import MySql from "./icons/MySql.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 
 const TAGS = {
-  NEXT: {
-    name: "Next.js",
-    class: "bg-black text-white",
-    icon: NextJS,
-  },
-  TAILWIND: {
-    name: "Tailwind CSS",
-    class: "bg-[#003159] text-white",
-    icon: Tailwind,
-  },
+    TS: {
+        name: "TypeScrypt",
+        class: "bg-[#003159] text-white",
+        icon: TypeScrypt,
+    },
+    REACT: {
+        name: "React",
+        class: "bg-[#003159] text-white",
+        icon: React,
+    },
+    REDUX: {
+        name: "Redux",
+        class: "bg-[#003159] text-white",
+        icon: Redux,
+    },
+    VITE: {
+        name: "Vite",
+        class: "bg-[#003159] text-white",
+        icon: Vite,
+    },
+    KOTLIN: {
+        name: "Kotlin",
+        class: "bg-[#003159] text-white",
+        icon: Kotlin
+    },
+    ANDROID: {
+        name: "Android",
+        class: "bg-[#003159] text-white",
+        icon: Android
+    },
+    JAVA: {
+        name: "Java",
+        class: "bg-[#003159] text-white",
+        icon: Java
+    },
+    MYSQL: {
+        name: "MySql",
+        class: "bg-[#003159] text-white",
+        icon: MySql
+    }
 }
 const PROJECTS = [
-  {
-    title: "SVGL - A beautiful library with SVG logos",
-    description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
-  },
-  {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
-    description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
-  },
+    {
+        title: "App Movil Caja Sullana",
+        description:
+            "Lideré el desarrollo integral de la aplicación, participando activamente como desarrollador y diseñando la arquitectura junto con las tecnologías más adecuadas para el proyecto. Además, asumí la responsabilidad de integrar con éxito las plataformas Niubiz y FacePhi, garantizando una interacción fluida y sin contratiempos con estas importantes entidades.",
+        image: "/projects/cajaSullana.webp",
+        tags: [TAGS.KOTLIN, TAGS.ANDROID],
+    },
+    {
+        title: "Home Banking Caja Cusco",
+        description:
+            "Encargado de liderar la implementación del consumo de las REST APIs y configurar el servidor de desarrollo con las tecnologías esenciales para el proyecto. Además, desarrollé un script en bash para agilizar el despliegue en el entorno de desarrollo, logrando reducir significativamente el tiempo de despliegue a menos de un minuto.",
+        image: "/projects/cajaCusco.webp",
+        tags: [TAGS.REACT, TAGS.TS, TAGS.REDUX, TAGS.VITE],
+    },
+    {
+        title: "Sistema de Gestion de Ventas e Inventario",
+        description:
+            "Aplicación de escritorio encargada de la gestión de ventas, control de inventario y procesamiento de pagos, dirigido específicamente a las micro y pequeñas empresas del sector comercial que están en una etapa de expansión.",
+        image: "/projects/java.webp",
+        tags: [TAGS.JAVA, TAGS.MYSQL],
+    },
 ]
 ---
 
 <div class="flex flex-col gap-y-16">
-  {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
-    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-  <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
-    </div>
-  </div>
+    {
+        PROJECTS.map(({image, title, description, tags, link, github}) => (
+                <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+                    <div class="w-full md:w-1/2">
+                        <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+                            <img alt="Recién llegado vs 5 años en Nueva Zelanda"
+                                 class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+                                 loading="lazy" src={image}/>
+                        </div>
+                    </div>
 
-  <div class="w-full md:w-1/2 md:max-w-lg">
-    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-      {title}
-    </h3>
-    <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-2">
-          {tags.map((tag) => (
-            <li>
+                    <div class="w-full md:w-1/2 md:max-w-lg">
+                        <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+                            {title}
+                        </h3>
+                        <div class="flex flex-wrap mt-2">
+                            <ul class="flex flex-row mb-2 gap-x-2">
+                                {tags.map((tag) => (
+                                        <li>
               <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                      class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
               >
-                <tag.icon class="size-4" />
-                {tag.name}
+                <tag.icon class="size-4"/>
+                  {tag.name}
               </span>
-            </li>
-          ))}
-        </ul>
+                                        </li>
+                                ))}
+                            </ul>
 
-      <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
-      <footer class="flex items-end justify-start mt-4 gap-x-4">
-          {github && (
-            <LinkButton href={github}>
-              <GitHub class="size-6" />
-              Code
-              
-            </LinkButton>
-          )}
-          {link && (
-            <LinkButton href={link}>
-              <Link class="size-4" />
-              Preview
-            </LinkButton>
-          )}
-        </footer>
-    </div>
-  </div>
-</article>
-    ))
-  }
+                            <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
+                            <footer class="flex items-end justify-start mt-4 gap-x-4">
+                                {github && (
+                                        <LinkButton href={github}>
+                                            <GitHub class="size-6"/>
+                                            Code
+
+                                        </LinkButton>
+                                )}
+                                {link && (
+                                        <LinkButton href={link}>
+                                            <Link class="size-4"/>
+                                            Preview
+                                        </LinkButton>
+                                )}
+                            </footer>
+                        </div>
+                    </div>
+                </article>
+        ))
+    }
 </div>
 
 
